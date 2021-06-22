@@ -1,51 +1,42 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
- * print_times_table - prints times table
- * @n : times table to use
- * Return:void
+ * print_times_table - prints the n times table
+ * @n: number to start from
+ * Return: void
  */
 
 void print_times_table(int n)
 {
+	int i, j, r;
 
-	int a = 0, rep, b;
-
-	if (n < 0 || n > 15)
-		return;
-
-	while (a <= n)
+	if (n <= 15 && n >= 0)
 	{
-		for (b = 0; b <= n; b++)
+		for (i = 0; i < n + 1; i++)
 		{
-			rep = a * b;
-			if (b == 0)
-				_putchar('0' + rep);
-			else if (rep < 10)
+			for (j = 0; j < n + 1; j++)
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + rep);
+				r = (j * i);
+
+				if (r > 99)
+				{
+					printf(" %d", r);
+				} else if (r > 9)
+				{
+					printf("  %d", r);
+				} else if (j != 0)
+				{
+					printf("   %d", r);
+				} else
+				{
+					printf("%d", r);
+				}
+				if (j != n)
+				{
+					printf(",");
+				}
 			}
-			else if (rep < 100)
-			{
-				_putchar(' ');
-				_putchar('0' + rep / 10);
-				_putchar('0' + rep % 10);
-			}
-			else
-			{
-				_putchar('0' + rep / 100);
-				_putchar('0' + (rep - 100) / 10);
-				_putchar('0' + rep % 10);
-			}
-			if (b < n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			printf("\n");
 		}
-		_putchar('\n');
-		a++;
 	}
 }
