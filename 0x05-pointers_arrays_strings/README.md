@@ -1,0 +1,1 @@
+This README.md file contains the description for the 0x05-pointers_arrays_strings dir.
