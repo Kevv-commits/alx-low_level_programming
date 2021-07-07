@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- * _strlen_recursion - return string len
- * @s: input string
+ * _strlen_recursion - returns the length of a string
  *
- * Description: returns the length of a string
- * Return: returns string len
+ * @s: string
+ *
+ * Return: integer length of the sting
  */
 
 int _strlen_recursion(char *s)
- {
-	 int i = 0;
+{
+	int i = 0;
 
-	 if (*s)
-	 {
-		 i++;
-		 i += _strlen_recursion(s + 1);
-	 }
-	 return (i);
- }
+	if (*s)
+	{
+		i++;
+		i += _strlen_recursion(s + 1);
+	}
+	return (i);
+}
