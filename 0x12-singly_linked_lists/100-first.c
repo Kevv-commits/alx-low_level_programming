@@ -1,12 +1,13 @@
 #include <stdio.h>
 
+void p(void) __attribute__ ((constructor));
+
 /**
- * b - prints from init by the loader before main
+ * p- prints from init by the loader before main
+ * returns: nothing
  */
 
-void b(void) __attribute__ ((constructor));
-
-void b(void)
+void p(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
