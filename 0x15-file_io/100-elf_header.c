@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * closes_file - Closes a file.
  * @fil: ELF file.
