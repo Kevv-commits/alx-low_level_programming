@@ -1,4 +1,3 @@
-# makefile2
 CC = gcc
 SRC = main.c school.c
 
